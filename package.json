@@ -10,7 +10,7 @@
         "preview": "vite preview",
         "extract": "lingui extract",
         "prepare": "yarn workspace @beda.software/emr prepare && yarn compile",
-        "check-config": "if [ ! -f ./contrib/emr-config/config.js ]; then echo 'Config ./contrib/emr-config/config.js does not exists'; exit 1;fi",
+        "check-config": "IF NOT EXIST .\\contrib\\emr-config\\config.js (ECHO Config .\\contrib\\emr-config\\config.js does not exist EXIT /B 1)",
         "typecheck": "tsc",
         "compile": "lingui compile --typescript",
         "storybook": "storybook dev -p 6006",
